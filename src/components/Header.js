@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useCart } from "@/context/CartContext";
@@ -25,8 +26,7 @@ export default function Header() {
 
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center gap-3 sm:gap-6">
         <Link href="/" className="flex items-center shrink-0">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.svg" alt="Pick Them Pay" width={190} height={38} />
+          <Image src="/logo.png" alt="Pick Them Pay" width={780} height={240} className="h-10 w-auto sm:h-12" priority />
         </Link>
 
         <form onSubmit={handleSearch} className="flex-1 flex items-center">
